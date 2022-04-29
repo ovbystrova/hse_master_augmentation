@@ -1,0 +1,30 @@
+seed: 24666
+path_to_save_folder: models
+
+# data
+data:
+  train_data_path: ../data/modeling/train_24666.csv
+  test_data_path: ../data/modeling/test_24666.csv
+  sep: ','
+  text_column: Текст
+  target_column: Тональность
+
+# tf-idf
+tf-idf:
+  lowercase: true
+  ngram_range: (1, 2)
+  max_df: 0.90
+  min_df: 1
+
+# logreg
+logreg:
+  penalty: l2
+  C: 3.0
+  class_weight: balanced
+  solver: saga
+  n_jobs: -1
+
+# grid-search
+grid-search:
+  do_grid_search: true
+  grid_search_params_path: hyperparams.py

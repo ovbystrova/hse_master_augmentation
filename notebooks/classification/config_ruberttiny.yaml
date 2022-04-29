@@ -1,0 +1,29 @@
+#model
+transformer_model:
+  model: "cointegrated/rubert-tiny"
+  path_to_state_dict: false
+  device: "cuda"
+  dropout: 0.2
+  tiny_bert: true
+  learning_rate: 1e-6
+  batch_size: 8
+  shuffle: true
+  maxlen: 512
+
+# data
+data:
+  train_data_path: "../data/modeling/train_24666.csv"
+  test_data_path: "../data/modeling/test_24666.csv"
+  text_column: "Текст"
+  target_column: "Тональность"
+  random_state: 23
+  test_size: 0.3
+
+# training
+training:
+  save_state_dict: false
+  delta: 0.001
+  patience: 7
+  num_epochs: 10
+  average_f1: macro
+  output_dir: results_24666_ruberttiny/

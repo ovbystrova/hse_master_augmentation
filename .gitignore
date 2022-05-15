@@ -1,3 +1,6 @@
 data/*
 models/*
 .ipynb_checkpoints
+notebooks/augmentations/NL-Augmenter/
+notebooks/augmentations/eda_nlp/
+notebooks/augmentations/ru-rnc.map
